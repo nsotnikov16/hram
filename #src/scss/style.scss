@@ -1,0 +1,80 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    /* src: url(../fonts/#{$file_name}.woff2) format("woff2"); */
+    src: url(../fonts/#{$file_name}.woff) format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "fonts";
+
+@import "normalize";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  font-family: "Source Sans Pro";
+  &__container {
+    margin: 0 auto;
+    padding: 0 15%;
+  }
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  /* identical to box height, or 144% */
+
+  color: #4c72f5;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #020334;
+  padding-top: 5px;
+  max-width: 390px;
+}
+
+@import "header";
+
+@import "logo";
+
+@import "nav";
+
+@import "banner";
+
+@import "about";
+
+@import "events";
+
+@import "kids";
+
+@import "swiper";
+@import "media";

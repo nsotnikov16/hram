@@ -1,0 +1,66 @@
+.kids {
+    margin-bottom: 70px;
+    // .kids__top
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            max-width: 100%;
+        }
+    }
+
+    // .kids__cards
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 320px);
+        margin: 61px 0 0;
+        gap: 21px;
+        justify-content: center;
+    }
+
+    // .kids__card
+
+    &__card {
+        border: 3px solid #ecedee;
+        border-radius: 10px;
+        padding: 28px 35px 36px;
+
+        h3 {
+            margin-top: 25px;
+            font-size: 24px;
+            line-height: 26px;
+            letter-spacing: -0.04em;
+            color: #020334;
+        }
+
+        p {
+            margin: 21px 0;
+            font-size: 16px;
+            line-height: 16px;
+            color: #51525c;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 30px;
+            li {
+                font-size: 16px;
+                line-height: 16px;
+                color: #51525c;
+                max-width: 200px;
+            }
+        }
+    }
+
+    // .kids__img
+
+    &__img {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+    }
+}

@@ -1,0 +1,40 @@
+.media {
+    margin-bottom: 17px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        margin-bottom: 27px;
+    }
+
+    &__arrows {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.arrow {
+    display: block;
+    width: 43px;
+    height: 43px;
+    background-image: url(../img/icons/arrow.svg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    border: 2px solid #ebebef;
+    &:first-child {
+        margin-right: 10px;
+    }
+    &.swiper-button-prev {
+        transform: scale(-1, 1);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+

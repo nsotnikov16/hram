@@ -1,0 +1,28 @@
+.nav {
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // .menu__link
+
+    li {
+        margin-right: 60px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        color: #091524;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

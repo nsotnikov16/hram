@@ -1,0 +1,23 @@
+.banner {
+    height: 700px;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 15%;
+
+    align-items: center;
+
+    // .banner__title
+
+    &__title {
+        max-width: 717px;
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+}

@@ -1,0 +1,45 @@
+.about {
+    background: #eef1f5;
+    // .about__container
+
+    &__container {
+        background: #f8fbff;
+        border-radius: 8px;
+        display: flex;
+        transform: translateY(-70px);
+    }
+
+    // .about__img
+
+    &__img {
+        display: block;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    // .about__info
+
+    &__info {
+        padding: 44px 60px;
+    }
+
+    // .about__top
+
+    &__top {
+        margin-bottom: 20px;
+    }
+
+    // .about__down
+
+    &__down {
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            color: #4b4c57;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
