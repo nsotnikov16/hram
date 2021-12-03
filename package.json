@@ -1,9 +1,9 @@
 {
-	"name": "fls-gulp",
+	"name": "hram",
 	"version": "1.0.0",
 	"description": "Сборка gulp",
 	"main": "index.html",
-	"author": "Fls",
+	"author": "hram",
 	"license": "ISC",
 	"scripts": {
 		"deploy": "gh-pages -d hram"
