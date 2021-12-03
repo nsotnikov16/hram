@@ -691,6 +691,7 @@ a {
 
 .events__info h3 {
   padding-bottom: 5px;
+  line-height: 36px !important;
 }
 
 .events__info p {
