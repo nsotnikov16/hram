@@ -40,12 +40,15 @@ a {
   &__container {
     margin: 0 auto;
     padding: 0 15%;
-    @media(max-width: 1919px) {
+    @media (max-width: 1919px) {
       padding: 0 30px;
     }
 
-    @media(max-width: 1000px) {
+    @media (max-width: 1000px) {
       padding: 0 20px;
+    }
+    @media (max-width: 374px) {
+      padding: 0 10px;
     }
   }
 }
@@ -68,6 +71,20 @@ a {
   padding-top: 5px;
   max-width: 390px;
 }
+
+@media (max-width: 650px) {
+  .subtitle {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .title {
+    font-size: 34px;
+    line-height: 34px;
+  }
+}
+
+
 
 @import "header";
 
@@ -110,14 +127,17 @@ a {
   }
 
   &.arrow_scroll {
-    border: 2px solid #4C72F5;
+    border: 2px solid #4c72f5;
     transform: rotate(-90deg);
     position: absolute;
     bottom: 5%;
     right: 8%;
-    @media(max-width: 1919px) {
+    @media (max-width: 1919px) {
       bottom: -10%;
       right: 2%;
+    }
+    @media (max-width: 1000px) {
+      display: none;
     }
   }
 }

@@ -1,41 +1,72 @@
 .logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // .logo_header
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // .logo_header
 
-    // .logo__icon
+  // .logo__icon
 
-    &__icon {
-        background-image: url(../img/icons/header-logo.svg);
-        width: 35px;
-        height: 47px;
+  &__icon {
+    background-image: url(../img/icons/header-logo.svg);
+    width: 35px;
+    height: 47px;
+    background-repeat: no-repeat;
+  }
+
+  // .logo__title
+
+  &__title {
+    font-family: "Vinque";
+
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: -0.04em;
+    color: #091524;
+    padding-left: 10px;
+  }
+
+  &.logo_header {
+  }
+
+  &.logo_footer {
+    justify-content: flex-start;
+    .logo__icon {
+      background-image: url(../img/icons/footer-logo.svg);
     }
 
-    // .logo__title
-
-    &__title {
-        font-family: "Vinque";
-
-        font-size: 32px;
-        line-height: 50px;
-        letter-spacing: -0.04em;
-        color: #091524;
-        padding-left: 10px;
-
+    .logo__title {
+      color: #f8fbff;
     }
+  }
+}
 
-    &.logo_header {
-    }
+@media (max-width: 650px) {
+  .logo__icon {
+    width: 30px;
+    height: 40px;
+    background-size: 30px 40px;
+  }
+  .logo__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
 
-    &.logo_footer {
-        justify-content: flex-start;
-        .logo__icon {
-            background-image: url(../img/icons/footer-logo.svg);
-        }
+@media (max-width: 450px) {
+  .logo__title:not(.logo.logo_footer .logo__title) {
+    max-width: 190px;
+  }
+}
 
-        .logo__title {
-            color: #f8fbff;
-        }
-    }
+@media (max-width: 375px) {
+  .logo__title:not(.logo.logo_footer .logo__title) {
+    font-size: 18px;
+    max-width: 145px;
+  }
+}
+
+@media (max-width: 374px) {
+  .logo__title:not(.logo.logo_footer .logo__title) {
+    max-width: 170px;
+  }
 }

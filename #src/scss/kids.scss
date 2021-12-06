@@ -11,6 +11,13 @@
         h2 {
             max-width: 100%;
         }
+
+        @media(max-width: 500px) {
+            align-items: flex-start;
+            h2 {
+                max-width: 70%;
+            }
+        }
     }
 
     // .kids__cards
@@ -23,6 +30,14 @@
         justify-content: center;
         @media(max-width: 1380px) {
             gap: 15px;
+        }
+
+        @media (max-width: 999px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media(max-width: 595px) {
+            grid-template-columns: 1fr;
         }
     }
 
