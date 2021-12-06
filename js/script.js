@@ -25,3 +25,54 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+
+/* Попапы */
+const popups = document.querySelectorAll(".popup");
+function openPopup(pointer, target) {
+  const popup = document.querySelector(`.popup#${pointer}`);
+  popup.classList.add("popup_opened");
+  if (pointer === "photo") {
+    popup.querySelector(".popup__image").src = target.src;
+    
+  }
+
+  document.addEventListener("keydown", handleEscClose);
+}
+
+function handleEscClose(evt) {
+  if (evt.keyCode === 27) {
+    closePopup();
+  }
+}
+
+function handleOverlayClick(evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup();
+  }
+}
+
+function closePopup() {
+  popups.forEach((el) => {
+    el.classList.remove("popup_opened");
+  });
+
+  document.removeEventListener("keydown", handleEscClose);
+}
+
+if (popups.length > 0) {
+  popups.forEach((popup) => {
+    const id = popup.id;
+    const closeBtn = popup.querySelector(".close-btn");
+    const popupContainer = popup.querySelector(".popup__container");
+
+    const links = document.querySelectorAll(`[data-pointer="${id}"]`);
+    links.forEach((link) => {
+      link.addEventListener("click", ({ target }) => {
+        openPopup(link.dataset.pointer, target);
+      });
+    });
+
+    closeBtn.addEventListener("click", () => closePopup());
+    popupContainer.addEventListener("click", (evt) => handleOverlayClick(evt));
+  });
+}
