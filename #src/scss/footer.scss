@@ -10,6 +10,17 @@
         grid-template-columns: 0.7fr 1.3fr;
         gap: 10%;
         border-bottom: 1px solid #2a4682;
+        @media(max-width: 1385px) {
+            grid-template-columns: 0.8fr 1.2fr;
+        }
+
+        @media(max-width: 1220px) {
+            grid-template-columns: 0.9fr 1.1fr;
+        }
+        @media(max-width: 1090px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 5%;
+        }
     }
 
     // .footer__left

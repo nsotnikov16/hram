@@ -17,10 +17,13 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(4, 320px);
+        grid-template-columns: repeat(4, 1fr/* 320px */);
         margin: 61px 0 0;
         gap: 21px;
         justify-content: center;
+        @media(max-width: 1380px) {
+            gap: 15px;
+        }
     }
 
     // .kids__card
@@ -53,6 +56,18 @@
                 line-height: 16px;
                 color: #51525c;
                 max-width: 200px;
+                margin-bottom: 5px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        
+        @media(max-width: 1180px) {
+            padding: 28px 16px 36px;
+            &:hover {
+                border-top: 5px solid #4c72f5;
             }
         }
     }

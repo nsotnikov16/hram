@@ -10,6 +10,10 @@
 
     align-items: center;
 
+    @media (max-width: 1919px) {
+        padding: 0 30px;
+        background-position: right center;
+    }
     // .banner__title
 
     &__title {
@@ -19,5 +23,10 @@
         letter-spacing: -0.02em;
         font-weight: 700;
         color: #ffffff;
+        @media (max-width: 1280px) {
+            font-size: 60px;
+            line-height: 60px;
+            max-width: 600px;
+        }
     }
 }
