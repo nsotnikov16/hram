@@ -10,14 +10,13 @@
         background-image: url(../img/icons/header-logo.svg);
         width: 35px;
         height: 47px;
-        
     }
 
     // .logo__title
 
     &__title {
         font-family: "Vinque";
-        
+
         font-size: 32px;
         /* line-height: 50px; */
         letter-spacing: -0.04em;
@@ -29,5 +28,13 @@
     }
 
     &.logo_footer {
+        justify-content: flex-start;
+        .logo__icon {
+            background-image: url(../img/icons/footer-logo.svg);
+        }
+
+        .logo__title {
+            color: #f8fbff;
+        }
     }
 }

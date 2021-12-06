@@ -1,11 +1,15 @@
 .swiper.gallery {
     padding: 0 20px;
+    .swiper-slide {
+        cursor: pointer;
+    }
 }
 
-.swiper-button-next, .swiper-button-prev {
-   
+.swiper-button-next,
+.swiper-button-prev {
     all: initial;
-    &::after, &::before {
+    &::after,
+    &::before {
         all: initial;
         content: "";
     }

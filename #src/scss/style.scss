@@ -78,3 +78,36 @@ a {
 
 @import "swiper";
 @import "media";
+@import "footer";
+@import "popup";
+
+.arrow {
+  display: block;
+  width: 43px;
+  height: 43px;
+  background-image: url(../img/icons/arrow.svg);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 6px;
+  border: 2px solid #ebebef;
+  &:first-child {
+    margin-right: 10px;
+  }
+  &.swiper-button-prev {
+    transform: scale(-1, 1);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.arrow_scroll {
+    border: 2px solid #4C72F5;
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 5%;
+    right: 8%;
+  
+  }
+}
