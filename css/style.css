@@ -472,6 +472,7 @@ a {
   -webkit-box-shadow: 0px 5px 24px 1px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 5px 24px 1px rgba(0, 0, 0, 0.08);
   background: #fff;
+  position: relative;
 }
 
 .header__container {
@@ -509,7 +510,7 @@ a {
 .logo__title {
   font-family: "Vinque";
   font-size: 32px;
-  /* line-height: 50px; */
+  line-height: 50px;
   letter-spacing: -0.04em;
   color: #091524;
   padding-left: 10px;
@@ -527,6 +528,32 @@ a {
 
 .logo.logo_footer .logo__title {
   color: #f8fbff;
+}
+
+.nav__button {
+  padding: 10px;
+  border: 2px solid #ebebef;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  outline: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  font-variant: small-caps;
+  background-color: inherit;
+  color: #091524;
+  text-transform: uppercase;
+  width: 100px;
+}
+
+.nav__button span {
+  font-size: 16px;
+}
+
+.nav__button:hover {
+  cursor: pointer;
+  border: 2px solid #4C72F5;
 }
 
 .menu {
@@ -558,6 +585,47 @@ a {
 
 .menu__link:hover {
   cursor: pointer;
+  color: #4C72F5;
+}
+
+.nav.nav_open .nav__button {
+  background-color: #4C72F5;
+  color: #fff;
+}
+
+.nav.nav_open .menu {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  right: 20px;
+  border-top: 2px solid #f8f8f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.nav.nav_open .menu li {
+  margin-right: 0;
+  padding: 12px;
+  border-bottom: 2px solid #f8f8f8;
+  width: 100%;
+}
+
+.nav.nav_open .menu li:last-child {
+  border-bottom: none;
+}
+
+.nav.nav_open .menu__link {
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 
 .banner {
@@ -604,6 +672,8 @@ a {
   display: block;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about__info {
@@ -756,7 +826,7 @@ a {
 
 .kids__cards {
   display: grid;
-  grid-template-columns: repeat(4, 320px);
+  grid-template-columns: repeat(4, 1fr);
   margin: 61px 0 0;
   gap: 21px;
   -webkit-box-pack: center;
@@ -795,6 +865,11 @@ a {
   line-height: 16px;
   color: #51525c;
   max-width: 200px;
+  margin-bottom: 5px;
+}
+
+.kids__card ul li:last-child {
+  margin-bottom: 0;
 }
 
 .kids__img {
@@ -1006,9 +1081,126 @@ a {
   right: 8%;
 }
 
+@media (min-width: 1000px) {
+  .nav__button {
+    display: none;
+  }
+}
+
+@media (max-width: 1919px) {
+  .page__container {
+    padding: 0 30px;
+  }
+
+  .header__container {
+    padding: 15px 0;
+  }
+
+  .banner {
+    padding: 0 30px;
+    background-position: right center;
+  }
+
+  .arrow.arrow_scroll {
+    bottom: -10%;
+    right: 2%;
+  }
+}
+
+@media (max-width: 1385px) {
+  .footer__container {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}
+
+@media (max-width: 1380px) {
+  .events__container {
+    display: block;
+  }
+
+  .events__img {
+    display: none;
+  }
+
+  .events__left {
+    margin-right: 0;
+  }
+
+  .events__events {
+    width: 100%;
+  }
+
+  .events__info {
+    max-width: 100%;
+  }
+
+  .events__info h3 {
+    max-width: 100%;
+  }
+
+  .events__event:first-child {
+    border-top: 5px solid #4c72f5;
+  }
+
+  .kids__cards {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .banner__title {
+    font-size: 60px;
+    line-height: 60px;
+    max-width: 600px;
+  }
+
+  .about__img {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 1220px) {
+  .footer__container {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
 @media (max-width: 1200px) {
+  .menu li {
+    margin-right: 30px;
+  }
+
   .popup__image {
     width: 50vw;
+  }
+}
+
+@media (max-width: 1180px) {
+  .kids__card {
+    padding: 28px 16px 36px;
+  }
+
+  .kids__card:hover {
+    border-top: 5px solid #4c72f5;
+  }
+}
+
+@media (max-width: 1090px) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .page__container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 999px) {
+  .menu {
+    display: none;
   }
 }
 
