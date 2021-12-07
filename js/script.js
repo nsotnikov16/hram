@@ -102,8 +102,10 @@ menuBtn.addEventListener("click", () => {
     : navigation.classList.add("nav_open");
 });
 
-/* document.addEventListener("click", ({ target }) => {
+document.addEventListener("click", ({ target }) => {
   
-  if (navigation.classList.contains("nav_open") && target !== document.querySelector('.menu'))
+  
+
+  if (!target.closest('.nav'))
     navigation.classList.remove("nav_open");
-}); */
+});

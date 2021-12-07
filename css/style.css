@@ -505,6 +505,7 @@ a {
   background-image: url(../img/icons/header-logo.svg);
   width: 35px;
   height: 47px;
+  background-repeat: no-repeat;
 }
 
 .logo__title {
@@ -711,6 +712,8 @@ a {
 
 .events__invite {
   margin-top: 35px;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .events__events {
@@ -979,7 +982,7 @@ a {
 }
 
 .footer__copyright a {
-  color: #F8FBFF;
+  color: #f8fbff;
   text-decoration: underline;
 }
 
@@ -1072,7 +1075,7 @@ a {
 }
 
 .arrow.arrow_scroll {
-  border: 2px solid #4C72F5;
+  border: 2px solid #4c72f5;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -1098,7 +1101,7 @@ a {
 
   .banner {
     padding: 0 30px;
-    background-position: right center;
+    background-position: top center;
   }
 
   .arrow.arrow_scroll {
@@ -1196,11 +1199,31 @@ a {
   .page__container {
     padding: 0 20px;
   }
+
+  .banner {
+    height: 500px;
+  }
+
+  .arrow.arrow_scroll {
+    display: none;
+  }
 }
 
 @media (max-width: 999px) {
   .menu {
     display: none;
+  }
+
+  .kids__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    padding: 35px 0 25px;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1210,14 +1233,192 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .banner {
+    padding: 0 30px;
+    background-position: 65%;
+  }
+
+  .banner__title {
+    font-size: 50px;
+    line-height: 50px;
+    max-width: 475px;
+  }
+
+  .events__container {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    background: #f8fbff;
+  }
+
+  .about__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .about__img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .about__info {
+    padding: 44px 0 0;
+  }
+}
+
 @media (max-width: 700px) {
   .popup__image {
     width: 70vw;
   }
 }
 
+@media (max-width: 650px) {
+  .subtitle {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .title {
+    font-size: 34px;
+    line-height: 34px;
+  }
+
+  .logo__icon {
+    width: 30px;
+    height: 40px;
+    background-size: 30px 40px;
+  }
+
+  .logo__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .banner__title {
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .events__event {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 35px 25px;
+  }
+
+  .events__date {
+    padding-right: 0;
+  }
+
+  .events__date h3 {
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 3px;
+  }
+
+  .events__date p {
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 15px;
+  }
+
+  .events__info {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid #ecedee;
+  }
+
+  .events__info h3 {
+    font-size: 20px;
+    line-height: 20px !important;
+  }
+
+  .events__info p {
+    font-size: 16px;
+    line-height: 16px;
+    padding-bottom: 11px;
+  }
+}
+
 @media (max-width: 600px) {
   .popup__image {
     width: 80vw;
+  }
+}
+
+@media (max-width: 595px) {
+  .kids__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .kids__top {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .kids__top h2 {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__adress p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .footer__right h3 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .footer__copyright {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo__title:not(.logo.logo_footer .logo__title) {
+    max-width: 190px;
+  }
+
+  .media__arrows {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo__title:not(.logo.logo_footer .logo__title) {
+    font-size: 18px;
+    max-width: 145px;
+  }
+}
+
+@media (max-width: 374px) {
+  .page__container {
+    padding: 0 10px;
+  }
+
+  .logo__title:not(.logo.logo_footer .logo__title) {
+    max-width: 170px;
+  }
+
+  .nav__button {
+    padding: 10px 5px;
+    width: 90px;
+    font-size: 16px;
   }
 }
