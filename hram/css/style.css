@@ -802,6 +802,12 @@ a {
   color: #4b4c57;
 }
 
+.events__img {
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .kids {
   position: relative;
   margin-bottom: 70px;
